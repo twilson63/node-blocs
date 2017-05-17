@@ -1,0 +1,17 @@
+{
+  "name": "node-blocs",
+  "version": "1.0.0",
+  "description": "A bloc is a single loosely coupled container that listens for events then processes the input from the invoked event and emits the results.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "serve ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "serve": "^5.1.5",
+    "tachyons": "^4.7.2"
+  }
+}
