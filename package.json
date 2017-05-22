@@ -1,5 +1,5 @@
 {
-  "name": "node-blocs",
+  "name": "blocs",
   "version": "1.0.0",
   "description": "A bloc is a single loosely coupled container that listens for events then processes the input from the invoked event and emits the results.",
   "main": "index.js",
@@ -11,7 +11,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bloc-promise": "0.0.3",
+    "blocpkg": "0.0.2",
     "serve": "^5.1.5",
     "tachyons": "^4.7.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twilson63/node-blocs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/twilson63/node-blocs/issues"
+  },
+  "homepage": "https://github.com/twilson63/node-blocs#readme"
 }

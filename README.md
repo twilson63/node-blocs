@@ -8,11 +8,35 @@ easily be swapped or changed out, without having to refactor the entire applicat
 
 A blocpkg is a container that can house multiple blocs for a single domain.
 
+## Install
+
+    npm install blocs --save
+
+## Usage
+
+Create a Block Package
+
+    const pkg = require('blocs/pkg')
+
+    module.exports = pkg({
+      docs: '',
+      blocs: {
+      }
+    })
+
+Invoke a bloc
+
+    const exec = require('blocs/promise')(bus)
+
+    const results = await exec('MYBLOC', payload)
+
+---
+
 ## How to use a bloc
 
 All blocs can be invoked using callbacks or promises:
 
-    const { exec } = require('bloc-promise')(bus)
+    const exec = require('bloc-promise')(bus)
 
     // exec [type] [payload]
     exec('GEOCODE', { address: '1740 Foo Street', city: 'Racoon City', state: 'NJ', zip: '08057'})
