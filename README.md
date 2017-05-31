@@ -1,12 +1,22 @@
 # Node Blocs
 
-A bloc is a single loosely coupled container that listens for events then
+A bloc is a single loosely coupled module that listens for events then
 processes the input from the invoked event and emits the results.
 
 By leveraging the event system, a block can be indirectly invoked and can
 easily be swapped or changed out, without having to refactor the entire application.
 
-A blocpkg is a container that can house multiple blocs for a single domain.
+A bloc/pkg is a container that can house multiple blocs for a single domain.
+
+Each bloc must implement the following functions on a object:
+
+* validate - this function takes the payload and returns an object, the object
+must have an `ok` node and it should be true or false
+* exec - this function performs the functionality of the bloc and it should
+return a promise
+* test - this function returns a function that runs the test suite of the `bloc`
+
+Each bloc must be wrapped in a bloc `pkg` so that it can be registered for usage.
 
 ## Install
 
@@ -108,13 +118,14 @@ About the pkg and the blocs
       blocs: {
         GEOCODE: {
           validate (payload) {
-
+            // must return a object that has at least an ok property that is a boolean
+            return { ok: true }
           },
           exec (payload) {
-
+            // return a promise
           },
           test (payload) {
-
+            // return a function
           }
         }
       }
