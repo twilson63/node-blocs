@@ -1,6 +1,6 @@
 {
   "name": "blocs",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A bloc is a single loosely coupled container that listens for events then processes the input from the invoked event and emits the results.",
   "main": "index.js",
   "scripts": {
